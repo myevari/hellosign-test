@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 
 app.get("*", (req, res) => {
+  console.log("req", req);
+  console.log("res", res);
   res.write(
     "<h1><marquee direction=left>Hello from Express path `/about` on Now 2.0!</marquee></h1>"
   );
