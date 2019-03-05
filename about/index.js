@@ -1,9 +1,8 @@
 const express = require("express");
-var bodyParser = require("body-parser");
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false, type: "form/multipart" }));
-app.use(bodyParser.json());
+var multer = require("multer");
+var upload = multer();
 
 app.get("*", (req, res) => {
   console.log("req", req);
@@ -16,7 +15,7 @@ app.get("*", (req, res) => {
   res.end();
 });
 
-app.post("*", function(req, res) {
+app.post("*", upload.array(), function(req, res) {
   console.log("req", req);
   console.log("req.body", req.body);
   console.log("res", res);
