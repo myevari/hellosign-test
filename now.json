@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "hellosign-test",
+  "builds": [
+    {
+      "src": "**/*.js",
+      "use": "@now/node"
+    }
+  ]
+}
