@@ -14,9 +14,9 @@ app.get("*", (req, res) => {
 
 app.post("*", function(req, res) {
   console.log("req", req);
+  console.log("req.body", req.body);
   console.log("res", res);
-  res.write("<h1>Got the post man</h1>");
-  res.end();
+  res.send("Hello API Event Received");
 });
 
 module.exports = app;
