@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.get("/hellosign", (req, res) => {
+app.get("*", (req, res) => {
   res.write(
     "<h1><marquee direction=right>Hello from Express path `/` on Now 2.0!</marquee></h1>"
   );
