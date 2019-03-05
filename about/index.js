@@ -12,7 +12,7 @@ app.get("*", (req, res) => {
   res.end();
 });
 
-app.post("/", function(req, res) {
+app.post("*", function(req, res) {
   console.log("req", req);
   console.log("res", res);
   res.write("<h1>Got the post man</h1>");
