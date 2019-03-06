@@ -18,6 +18,7 @@ import {
   Path,
   GET,
   PathParam,
+  FilesParam,
   POST
 } from "typescript-rest";
 
@@ -40,7 +41,8 @@ class AboutService {
   @POST
   postAbout(
     @Context
-    context: ServiceContext
+    context: ServiceContext,
+    @FilesParam("json") file: Express.Multer.File
   ) {
     console.log("GREGGGGG");
     console.log("req", context.request);
