@@ -46,7 +46,7 @@ var AboutService = /** @class */ (function () {
         __metadata("design:returntype", void 0)
     ], AboutService.prototype, "postAbout", null);
     AboutService = __decorate([
-        typescript_rest_1.Path("/about")
+        typescript_rest_1.Path("/")
     ], AboutService);
     return AboutService;
 }());
