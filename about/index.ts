@@ -11,7 +11,7 @@ import {
   POST
 } from "typescript-rest";
 
-@Path("/")
+@Path("/about")
 class AboutService {
   @GET
   getAbout(
