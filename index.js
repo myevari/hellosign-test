@@ -33,7 +33,7 @@ var AboutService = /** @class */ (function () {
         context.response.write('<h2>Go to <a href="/">/</a></h2>');
         context.response.end();
     };
-    AboutService.prototype.postAbout = function (context) {
+    AboutService.prototype.postAbout = function (context, file) {
         console.log("GREGGGGG");
         console.log("req", context.request);
         console.log("req.body", context.request.body);
@@ -50,8 +50,9 @@ var AboutService = /** @class */ (function () {
     __decorate([
         typescript_rest_1.POST,
         __param(0, typescript_rest_1.Context),
+        __param(1, typescript_rest_1.FilesParam("json")),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [typescript_rest_1.ServiceContext]),
+        __metadata("design:paramtypes", [typescript_rest_1.ServiceContext, Object]),
         __metadata("design:returntype", void 0)
     ], AboutService.prototype, "postAbout", null);
     AboutService = __decorate([
