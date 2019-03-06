@@ -10,7 +10,6 @@
 // });
 
 import * as express from "express";
-var app = express();
 
 import {
   Context,
@@ -50,5 +49,8 @@ class AboutService {
     context.response.send("Hello API Event Received");
   }
 }
+
+let app: express.Application = express();
+Server.buildServices(app);
 
 module.exports = app;

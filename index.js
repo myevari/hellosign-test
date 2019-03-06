@@ -22,7 +22,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //   res.end();
 // });
 var express = require("express");
-var app = express();
 var typescript_rest_1 = require("typescript-rest");
 var AboutService = /** @class */ (function () {
     function AboutService() {
@@ -60,4 +59,6 @@ var AboutService = /** @class */ (function () {
     ], AboutService);
     return AboutService;
 }());
+var app = express();
+typescript_rest_1.Server.buildServices(app);
 module.exports = app;
