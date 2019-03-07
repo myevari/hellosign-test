@@ -48,7 +48,7 @@ class AboutService {
     console.log("GREGGGGG");
     console.log("req", context.request);
     console.log("req.body", context.request.body);
-    console.log("file", file);
+    // console.log("file", file);
     console.log("res", context.response);
     context.response.send("Hello API Event Received");
   }
